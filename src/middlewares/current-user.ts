@@ -15,7 +15,7 @@ export const currentUser = (jwt_key: string) => {
         next: NextFunction
     ) => {
         if (!req.session?.jwt) {
-            return next();
+            next();
         }
 
         try {
