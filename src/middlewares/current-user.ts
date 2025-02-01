@@ -5,6 +5,7 @@ declare global {
 	interface Req extends Request {
 		session?: any,
 		currentUser?: any,
+		uploaderError?: any,
 	}
 }
 
