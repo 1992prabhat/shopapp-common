@@ -12,3 +12,5 @@ export * from './middlewares/validate-request'
 
 export * from './constants/auth/user.interfaces';
 export * from './constants/globals'
+
+export * from './services/authentication.service';
