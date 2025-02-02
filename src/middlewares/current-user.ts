@@ -10,7 +10,6 @@ declare global {
 }
 
 export const currentUser = (jwt_key: string) => {
-	console.log(jwt_key)
 	return (
 		req: Req,
 		res: Response,
@@ -21,6 +20,9 @@ export const currentUser = (jwt_key: string) => {
 		}
 
 		try {
+			console.log(req.session.jwt)
+			console.log(jwt_key)
+
 			const payload = jwt.verify(
 				req.session.jwt,
 				jwt_key!
