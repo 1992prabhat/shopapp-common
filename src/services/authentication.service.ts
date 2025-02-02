@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { JwtPayload } from '../constants/globals';
-import { scrypt, randomBytes }  from 'crypto';
+import { scrypt, randomBytes } from 'crypto';
 import { promisify } from 'util';
 
 const scryptAsync = promisify(scrypt);

@@ -5,7 +5,6 @@ declare global {
 	interface Req extends Request {
 		session?: any,
 		currentUser?: any,
-		uploaderError?: any,
 	}
 }
 
@@ -20,9 +19,7 @@ export const currentUser = (jwt_key: string) => {
 		}
 
 		try {
-			console.log(req.session.jwt)
-			console.log(jwt_key)
-
+			console.log(req.session)
 			const payload = jwt.verify(
 				req.session.jwt,
 				jwt_key!
