@@ -10,6 +10,7 @@ declare global {
 }
 
 export const currentUser = (jwt_key: string) => {
+	console.log(jwt_key)
 	return (
 		req: Req,
 		res: Response,
