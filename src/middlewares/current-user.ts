@@ -19,7 +19,6 @@ export const currentUser = (jwt_key: string) => {
 		}
 
 		try {
-			console.log(req.session)
 			const payload = jwt.verify(
 				req.session.jwt,
 				jwt_key!
